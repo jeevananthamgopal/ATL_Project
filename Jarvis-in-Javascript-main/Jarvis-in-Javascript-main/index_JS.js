@@ -69,7 +69,7 @@ function getDate1()
     var d = new Date();
     var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     document.getElementById("monthValue").innerHTML = months[d.getMonth()];
-    document.getElementById("datxue").innerHTML = d.getDate();
+    document.getElementById("dateValue").innerHTML = d.getDate();
     document.getElementById("timeValue").innerHTML = d.getHours() + ":" + d.getMinutes();
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     document.getElementById("weekDayValue").innerHTML = days[d.getDay()];

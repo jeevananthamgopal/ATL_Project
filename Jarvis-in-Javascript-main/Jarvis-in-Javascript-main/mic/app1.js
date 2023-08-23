@@ -69,11 +69,11 @@ function ProcessCommand(UserText)
          // window.open("https://docs.google.com");
          stepDown();
      }
-     // else if(UserText.includes('close this')) {
-     //     Speak("Closing this tab...");
-     //     // window.open("https://docs.google.com");
-     //     window.close();
-     // }
+     else if(UserText.includes('close this')) {
+         Speak("Closing this tab...");
+         // window.open("https://docs.google.com");
+         window.close();
+     }
     else if(UserText.includes('google classroom')) {
         Speak("Opening google classroom...");
         window.open("https://classroom.google.com");
@@ -230,6 +230,7 @@ function ProcessCommand(UserText)
         reloadJarvis();
     }
     else if(UserText.includes("shutdown")||UserText.includes("turn off")||UserText.includes("deactivate")){
+        Speak("Deactivating...")
         closeJarvis();
 
     }
