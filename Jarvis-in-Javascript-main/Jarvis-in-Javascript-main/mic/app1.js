@@ -47,7 +47,38 @@ function handleResults(data)
 }
 function ProcessCommand(UserText)
 {
-    if(UserText.includes('google'))
+     if(UserText.includes('google drive')) {
+        Speak("Opening google drive...");
+        window.open("https://drive.google.com");
+    }
+    else if(UserText.includes('google drive')) {
+        Speak("Opening google drive...");
+        window.open("https://drive.google.com");
+    }
+    else if(UserText.includes('google doc')) {
+        Speak("Opening google docs...");
+        window.open("https://docs.google.com");
+    }
+     else if(UserText.includes('step up')) {
+          Speak("Stepping up...");
+         // window.open("https://docs.google.com");
+         stepUp();
+     }
+     else if(UserText.includes('step down')) {
+         Speak("Stepping down...");
+         // window.open("https://docs.google.com");
+         stepDown();
+     }
+     // else if(UserText.includes('close this')) {
+     //     Speak("Closing this tab...");
+     //     // window.open("https://docs.google.com");
+     //     window.close();
+     // }
+    else if(UserText.includes('google classroom')) {
+        Speak("Opening google classroom...");
+        window.open("https://classroom.google.com");
+    }
+    else if(UserText.includes('google'))
     {
         Speak("Opening google...");
         window.open("https://www.google.com");
@@ -150,43 +181,28 @@ function ProcessCommand(UserText)
     }
     else if(UserText.includes('spotify') || UserText.includes('spotify')) {
         Speak("Opening spotify...");
-        window.open("open.spotify.com");
+        window.open("https://open.spotify.com");
     }
-    else if(UserText.includes('google drive')) {
-        Speak("Opening google drive...");
-        window.open("drive.google.com");
-    }
-    else if(UserText.includes('google drive')) {
-        Speak("Opening google drive...");
-        window.open("drive.google.com");
-    }
-    else if(UserText.includes('google doc')) {
-        Speak("Opening google docs...");
-        window.open("docs.google.com");
-    }
-    else if(UserText.includes('google classroom')) {
-        Speak("Opening google classroom...");
-        window.open("classroom.google.com");
-    }
+
     else if(UserText.includes('stratum ai')) {
         Speak("Opening stratum ai...");
-        window.open("www.stratum.ai");
+        window.open("https://www.stratum.ai");
     }
     else if(UserText.includes('canva')) {
         Speak("Opening canva...");
-        window.open("www.canva.com");
+        window.open("https://www.canva.com");
     }
     else if(UserText.includes('amazon')) {
         Speak("Opening amazon...");
-        window.open("www.amazon.com");
+        window.open("https://www.amazon.com");
     }
     else if(UserText.includes('apple')) {
         Speak("Opening apple...");
-        window.open("www.apple.com");
+        window.open("https://www.apple.com");
     }
     else if(UserText.includes('yahoo')) {
         Speak("Opening yahoo...");
-        window.open("www.yahoo.com");
+        window.open("https://www.yahoo.com");
     }
     else if(UserText.includes('camera') && UserText.includes('open'))
     {
@@ -292,6 +308,16 @@ function ProcessCommand(UserText)
         window.open("https://www.apple.com/ca/");
 
     }
+     else if(UserText.includes("step in")){
+         Speak("stepping in...")
+         // window.open("https://www.apple.com/ca/");
+        moveToXAxisIn();
+     }
+     else if(UserText.includes("step out")){
+         Speak("step out...")
+         // window.open("https://www.apple.com/ca/");
+        moveToXAxisOut();
+     }
     else if(UserText.includes("open reddit")){
         Speak("opening reddit...")
         window.open("https://www.reddit.com/");
@@ -484,18 +510,18 @@ function ProcessCommand(UserText)
         window.open("https://drive.google.com/drive/u/0/my-drive")
 
     }
-    //from abbu end
-    //useless commands startttttttttttttttttttttttttttttttttt------------------------------------------------------------------------------------------->
-    else if(UserText.includes("hi jarvis")){
-        Speak("hello, hope you are well ")
+    else if(UserText.includes("hi jarvis")){//from abbu end
+         //useless commands startttttttttttttttttttttttttttttttttt------------------------------------------------------------------------------------------->
+
+         Speak("hello, hope you are well ")
     }
     else if(UserText.includes("yo Jarvis ")){
         Speak("yo how can I help you my bro")
     }
-    else if(UserText.includes("what's good")){
+    else if(UserText.includes("what is good")){
         Speak("nothing much bro ")
     }
-    else if(UserText.includes("what is the meaning of life")){
+    else if(UserText.includes("meaning of life")){
         Speak("You good bro? It's too early to be asking these type of questions.")
     }
     else if(UserText.includes("How many pounds are in a Kilogram?")){
@@ -1021,3 +1047,6 @@ async function getNews(){
 //         speakMessage(response);
 //     }, 500); // Simulate a delay before the assistant responds
 // }
+function functiondoc(){
+    window.open("file:///C:/users/JEEVA");
+}

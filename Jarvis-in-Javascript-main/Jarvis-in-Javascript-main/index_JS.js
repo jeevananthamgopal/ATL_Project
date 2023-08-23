@@ -119,9 +119,7 @@ function Speak(TEXT)
         console.log(i);
     });
 }
-function functiondoc(){
-    window.open("file://C:/users/JEEVA");
-}
+
 function jarvisStartingReply()
       {
         Speak("please wait...system initializing...backing up configurations...gathering audio and video files...");
